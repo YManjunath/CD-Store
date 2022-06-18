@@ -1,0 +1,32 @@
+header {
+    position: sticky; 
+    top: 0;
+    z-index: 500;
+}
+
+.navbar {
+    padding: 5px;
+}
+
+
+.form-control {
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    color: blue;
+    z-index: 10;
+    right: 41%;
+    top: 25px;
+}
+
+.cart{
+    font-size: 30px;
+}
+
+.badge {
+    font-size: 10px;
+}

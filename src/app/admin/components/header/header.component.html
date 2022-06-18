@@ -1,0 +1,17 @@
+<header style="position: sticky; top: 0;">
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-items-center d-flex">
+            <i routerLink="/admin/products" style="font-size: 40px;" class="fa fa-home">&nbsp;
+            </i>
+            <strong routerLink="/admin/products" style="font-size: 30px;">CD-STORE</strong>
+            <!-- <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search for products">
+            </div>
+            <span class="fas fa-search search-icon"></span> -->
+        </div>
+        <button routerLink="cart" class="btn btn-primary">
+            <i class="fas fa-cart-plus cart"></i>
+            <div class="badge bg-danger badge">{{totalProducts}}</div>
+        </button>
+    </div>
+</header>
