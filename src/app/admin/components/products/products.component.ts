@@ -1,14 +1,13 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { ProductsService } from '../../shared/products.service';
 import { CartService } from '../../shared/cart.service'; 
-import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit, AfterViewInit {
+export class ProductsComponent implements OnInit {
 
   public productList: any;
   public filterCategory: any;
@@ -17,18 +16,12 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   selectedItem: any;
   showBtn:boolean = false;
 
-  @ViewChild(HeaderComponent) header: any;
 
   constructor(
     private productService: ProductsService,
     private cartService: CartService
   ) { }
 
-
-  ngAfterViewInit(): void {
-    this.filterKey = this.header?.searchTerm;
-    console.log(this.filterKey)
-  }
 
   ngOnInit(): void {
     this.productService.getAllProducts()
